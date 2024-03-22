@@ -67,6 +67,11 @@ def list_favourites(event, context):
                 ),
             }
 
+        # Convert possible Decimal types to int, for JSON serialization
+        for item in favorites:
+            item["org_id"] = int(item["org_id"])
+            item["favourite_org_id"] = int(item["favourite_org_id"])
+
         return {"statusCode": 200, "body": json.dumps(favorites)}
     except KeyError:
         return {
