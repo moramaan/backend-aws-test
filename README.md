@@ -4,14 +4,17 @@
 
 This is a backend practice project utilizing AWS and Serverless framework with Python to build a REST API. It allows an organization to add as a favourite another one and list all its favourite ones.
 
+>[!Note]
+> Currently not deployed
+
 ## Add Favourite Organization
 
 #### Request
 
 - **Method:** `POST`
-- **Endpoint:** `https://2bzdj9d9za.execute-api.us-east-1.amazonaws.com/dev/add-favourite`
+- **Endpoint:** `{aws_base_url}/dev/add-favourite`
 - **Headers:** 
-  - `x-api-key`: API key required, ask for it
+  - `x-api-key`: API key required
 
 #### Request Body Example
 
@@ -35,9 +38,9 @@ This is a backend practice project utilizing AWS and Serverless framework with P
 #### Request
 
 - **Method:** `GET`
-- **Endpoint:** `https://2bzdj9d9za.execute-api.us-east-1.amazonaws.com/dev/list-favourites`
+- **Endpoint:** `{aws_base_url}/dev/list-favourites`
 - **Headers:** 
-  - `x-api-key`: API key required, ask for it
+  - `x-api-key`: API key required
 - **Query Parameters:**
   - `org_id`: Numeric value indicating the organization id
 
